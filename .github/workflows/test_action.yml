@@ -18,8 +18,6 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-    name: Save output
-    steps:
       - shell: bash
         run: |
           expr 1 + 1 > output_test.log
