@@ -18,6 +18,11 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-      - name: Write Date README
+      - shell: bash
         run: |
-          date > README.md
+          expr 1 + 1 > output_test.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: output-log-file
+          path: output.log
