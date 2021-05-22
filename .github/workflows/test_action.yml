@@ -18,7 +18,6 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-  example-job:
     name: Save output
     steps:
       - shell: bash
