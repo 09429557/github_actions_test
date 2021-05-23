@@ -18,11 +18,9 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-      - shell: bash
-        run: |
-          expr 1 + 1 > output_test.log
-      - name: Upload output file
-        uses: actions/upload-artifact@v2
+      - run: echo Bye > world.txt
+
+      - uses: actions/upload-artifact@v2
         with:
-          name: output-log-file
-          path: output.log
+          name: my-artifact
+          path: world.txt
