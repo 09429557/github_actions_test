@@ -20,9 +20,9 @@ jobs:
 
       - run: mkdir -p path/to/artifact
 
-      - run: echo Bye > path/to/artifact/world.txt
+      - run: echo This is a test. > path/to/artifact/test_action.txt
 
       - uses: actions/upload-artifact@v2
         with:
-          name: my-artifact
-          path: path/to/artifact/world.txt
+          name: test-artifact
+          path: path/to/artifact/test_action.txt
