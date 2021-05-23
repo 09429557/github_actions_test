@@ -18,9 +18,11 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-      - run: echo Bye > world.txt
+      - run: mkdir -p path/to/artifact
+
+      - run: echo Bye > path/to/artifact/world.txt
 
       - uses: actions/upload-artifact@v2
         with:
           name: my-artifact
-          path: world.txt
+          path: path/to/artifact/world.txt
