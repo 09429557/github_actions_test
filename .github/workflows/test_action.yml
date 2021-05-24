@@ -18,11 +18,9 @@ jobs:
       - name: Run Hello World
         run: echo Hello, World.
 
-      - run: mkdir -p path/to/artifact
-
-      - run: echo This is a test. > path/to/artifact/test_action.txt
+      - run: echo This is a test. > test_action.txt
 
       - uses: actions/upload-artifact@v2
         with:
           name: test-artifact
-          path: path/to/artifact/test_action.txt
+          path: test_action.txt
